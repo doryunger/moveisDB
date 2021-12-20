@@ -1,0 +1,327 @@
+
+/* You can add global styles to this file, and also import other style files */
+
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+body {
+    /*padding: 2em 23em;*/
+    background:lightgray;
+}
+
+/*----------------Update------------------*/
+.mat-card{
+    top:2%;
+    display: flex !important;
+}
+.example-container{
+    height:100vh !important;
+}
+.example-card{
+    margin:2%;
+    display: flex;
+    float:left;
+    width: 10%;
+    height: 200px;
+
+}
+
+/*Media Queries for fixing distortion at some points*/
+
+@media screen and (max-width: 1150px){
+     body{
+    	padding: 2em 11.5em !important;
+    }
+
+}
+
+/*Media Queries For Tablates*/
+
+@media screen and (max-width: 1024px){
+     body{
+    	padding: 0em 0em !important;
+    }
+}
+
+@media screen and (max-width: 960px){
+    body{
+    	padding: 0em 0em !important;
+    }
+}
+
+@media screen and (max-width:768px){
+   body{
+    	padding: 0em 0em !important;
+    }
+}
+
+/*Media Queries For Mobiles*/
+@media screen and (max-width:480px){
+   
+
+   body{
+    	padding: 0em 0em !important;
+    }
+}
+.example-spacer {
+    flex: 1 1 auto;
+  }
+  .mat-card-header .mat-card-title{
+    font-size: 16px;
+  }
+  
+  .mat-card-header-text{
+    margin:0px;
+    white-space: pre-wrap;
+    word-break: break-word;  
+  }
+  .example-card{
+    margin-top: 4px;
+    width:25%;
+    height:25%;
+    display: flex !important;
+  }
+  .mat-button, .mat-flat-button, .mat-icon-button, .mat-stroked-button{
+    padding:0;
+    min-width: unset !important;
+    position: unset !important;
+  }
+  button#dialogOpen{
+    position: relative !important;
+    margin-left: 3%;
+    background: rgba(148, 10, 148, 0.308);
+    box-shadow:  1px 0.5px 0px rgba(0,100,50,0.5)
+  }
+  button#logout{
+    position: relative !important;
+    margin-left: 3%;
+    background-color:rgba(219,218,219,1);
+    color: rgba(148, 10, 148,1);
+    box-shadow:  1px 0.5px 0px rgba(  0,100,50,0.5)
+  }
+  .example-header-image { 
+    background-size: cover;
+  }
+  
+  .title{
+      font-weight: bold;
+  }
+  .selectBar{
+    width:15%;
+  }
+  button.cancelItem.mat-button{
+    padding: 0;
+  }
+  mat-card-content.mat-card-content{
+    position: relative;
+    right: 5%;
+
+  }
+  .mat-select{
+    width: 15% !important;
+    margin-left: 3%;
+  }
+  .img-article{
+    position: relative;
+    height: 80%;
+    width:70% !important;
+    left:40%;
+    top:13%;
+  
+  }
+  
+  .action-buttons{
+      text-align: center;
+  }
+      
+  .example-container {
+      width: 100%;
+      height: auto;
+      border: 1px solid rgba(111, 111, 111, 0.50);
+  }
+    
+  .example-sidenav-content {
+      display: flex;
+      height: 75%;
+      align-items: center;
+      justify-content: center;
+  }
+    
+  .example-sidenav {
+      padding: 20px;
+  }
+  .mat-card-header{
+    margin-top:20%;
+    flex:1; 
+  }
+  .source-name {
+      margin-left:5px; 
+  }
+  
+  .list-item:hover{
+      cursor: pointer;
+      background-color: #3f51b5;
+      color: white;
+  }
+  .mat-nav-list.list-horizontal {
+    padding: 0;
+    display: inline-block;
+    height: auto;
+    width: auto;
+    
+  }
+  
+  .mat-list-item.list-horizontal{
+    padding: 0;
+    display: inline-block;
+    height: auto;
+    width: auto;
+    border-radius: 5%;
+  }
+  
+  .mat-list-item.active{
+    background-color:#e2e2e2;
+  }
+  .mat-list-item:focus {
+    outline: 0;
+  }
+  .mat-drawer{
+    box-sizing: unset;
+    width: 250px;
+  }
+  .searchText{
+    position: relative;
+    border:0px;
+    border-style:solid;
+    width:100px;
+    border-radius: 4px;
+    font-size:17px;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+  }
+  .searchBtn{
+    position: relative;
+    border-radius: 4px;
+    font-weight: 600;
+    background-color: white;
+    color: rgb(103, 12, 163);
+    margin-left: 20px;
+    border:0px;
+    border-style: solid;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    font-size:17px;
+  }
+  .searchBtn:disabled{
+    /*color: rgb(51, 6, 82);*/
+    background-color: rgba(161, 161, 161, 0.376);
+    cursor: auto;
+  }
+  .warning {
+    border-radius: 8px;
+    display: none;
+    position: absolute;
+    font-size: 12px;
+    text-align: center;
+    font-weight: 500;
+    z-index: 2;
+    padding: 2px 4px;
+  
+  }
+  .search{
+    position: relative;
+    right:2%;
+  }
+  /*#toolbar{
+    position:fixed;
+    z-index: 10;
+  }*/
+  .sticky {
+    position: fixed;
+    top: 0;
+    /*width: 100%;*/
+    z-index: 10;
+  }
+  mat-card-content.mat-card-content{
+    flex:1;
+    
+  }
+  .mat-form-field{
+    /*margin:3.5%;*/
+    width:70%;
+  }
+  
+  mat-grid-tile.mat-grid-tile{
+    margin-left: 28%;
+  }
+  @media screen and (max-width:1500px){
+    mat-grid-tile.mat-grid-tile{
+      margin-left: 15%;
+    }
+  }
+  @media screen and (max-width:500px){
+    button#sideOpen{
+      padding:0px;
+      min-width: 35px;
+    }
+    .mat-toolbar-row, .mat-toolbar-single-row{
+      padding: 0px;
+    }
+    span#headline{
+      margin-right: 20px;
+      margin-left: 10px;
+      font-size: 12.5px;
+    }
+    .searchText{
+      width: 65px;
+      font-size:13.5px
+    }
+    .searchBtn{
+      font-size: 13.5px;
+      margin-left: 10px;
+    }
+    .img-article{
+      position: relative;
+      width:60%;
+      left:50%
+    }
+    .example-card{
+      width: 90%;
+      height: 25%;
+    }
+    .mat-card-header-text{
+      margin: 0px !important;
+    }
+  
+    .mat-card-content.mat-card-content{
+      width: 100%
+    }
+   
+  button#dialogOpen{
+    font-size: 11px;
+    width: 18% !important;
+    padding: 0 !important;
+    margin-left: 3%;
+  }
+  .mat-select{
+    font-size: 11px;
+    width: 25% !important;
+  }
+  button#logout{
+    font-size: 11px;
+    width: 18% !important;
+    padding: 0 !important;
+    margin-left: 3%;
+  }
+  mat-grid-tile.mat-grid-tile{
+    width: 100% !important;
+    margin-left: 0%;
+  }
+  mat-grid-list.mat-grid-list{
+    height:55vh !important;
+  }
+  .mat-form-field{
+    /*margin:3.5%;*/
+    width:65%;
+  }
+}
+  
+  

@@ -1,0 +1,47 @@
+<form [formGroup]="form" class="normal-form" (submit)="onSubmit()">
+    <mat-grid-list cols="2" rowHeight="450px">
+      <mat-grid-tile>
+        <div class="controles-container">
+          <input type="hidden" formControlName="$key">
+          <mat-form-field>
+            <input formControlName="moviename" matInput placeholder="Movie Name*">
+            <div *ngIf="form.get('moviename').invalid && form.get('moviename').touched">
+              <mat-error *ngIf="form.get('moviename').hasError('required')">This field is mandatory</mat-error>
+              <mat-error *ngIf="form.get('moviename').hasError('pattern')">English Only</mat-error>
+              <mat-error *ngIf="form.get('moviename').hasError('title')">Movie exists</mat-error>
+              <mat-error *ngIf="form.get('moviename').hasError('maxlength')">Movie name too long</mat-error>
+            </div>
+          </mat-form-field>
+          <mat-form-field>
+            <input placeholder="Genre" formControlName="genre" type="text" matInput [matAutocomplete]="auto">
+            <div *ngIf="form.get('genre').invalid && form.get('imdblink').touched">
+            <mat-error *ngIf="form.get('genre').hasError('required')">This field is mandatory</mat-error>
+           </div>
+            <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+              <mat-option *ngFor="let genre of genrelist" [value]="genre">{{genre}}</mat-option>
+            </mat-autocomplete>
+          </mat-form-field>
+          <mat-form-field>
+            <input formControlName="imdblink" matInput placeholder="IMDB Link*">
+            <div *ngIf="form.get('imdblink').invalid && form.get('imdblink').touched">
+              <mat-error *ngIf="form.get('imdblink').hasError('pattern')">Not a valid URL</mat-error>
+              <mat-error *ngIf="form.get('imdblink').hasError('required')">This field is mandatory</mat-error>
+            </div>
+          </mat-form-field>
+          <mat-form-field>
+            <input formControlName="image" matInput placeholder="IMDB Image*">
+            <div *ngIf="form.get('image').invalid && form.get('image').touched">
+            <mat-error *ngIf="form.get('image').hasError('pattern')">Not a valid URL</mat-error>
+            <mat-error *ngIf="form.get('image').hasError('required')">This field is mandatory</mat-error>
+  
+          </div>
+          </mat-form-field>
+          <div class="button-row">
+            <button class="submitBtn" mat-raised-button type="submit" [disabled]="form.invalid">Submit</button>
+            <button class="closeBtn" mat-button mat-dialog-close>Close</button>
+          </div>
+        </div>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </form>
+      

@@ -1,0 +1,30 @@
+<mat-toolbar id="toolbar" color="primary">
+    <span id="headline">Hi {{currentUser.username}}!</span> 
+    <mat-select class="selectBar"[(value)]="selected" placeholder="All" (selectionChange)="changeGenre(selected)">
+     <mat-option value="All">All</mat-option>
+     <mat-option *ngFor="let genre of genreList" value="{{genre}}">{{genre}}</mat-option>
+     </mat-select>
+     <button mat-button id="dialogOpen" (click)="openDialog()" >Add Movie</button>
+    <button mat-button id="logout" (click)="logout()" >Logout</button>
+ </mat-toolbar>
+ 
+ <mat-sidenav-container class="example-container">
+   <mat-card id={{movie.title}}  class="example-card"  *ngFor="let movie of movies">
+     <button class= "cancelItem" (click)="deleteMovie(movie.key)" value={{movie.title}} mat-button>
+       <mat-icon  style="-webkit-text-fill-color:red; position:absolute; top: 2%; left:2%" >cancel</mat-icon>
+   </button>
+   <mat-card-header>
+     <!--div mat-card-avatar [ngStyle]="{'background-image': 'url(../assets/images/'+ article.source.id +'.png)'}" class="example-header-image"></div-->
+     <mat-card-title class="title">{{movie.title}}</mat-card-title>
+     <mat-card-subtitle>{{movie.genre}}</mat-card-subtitle>
+   </mat-card-header>
+   <mat-card-content>
+     <a href={{movie.link}} target="_blank">
+     <img mat-card-image class="img-article" src={{movie.img}} alt="">
+     </a>
+   </mat-card-content>
+   </mat-card>
+ </mat-sidenav-container>
+ 
+ 
+ 

@@ -1,0 +1,20 @@
+﻿{
+    "compilerOptions": {
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "target": "ES5",
+        "baseUrl": "src",
+        "strict": false,
+        "declaration": false,
+        "skipLibCheck": true,
+        "noImplicitUseStrict": true,
+        "typeRoots": [
+            "node_modules/@types"
+        ],
+        "paths": {
+            "@/*": [
+                "app/*"
+            ]
+        }
+    }
+}
